@@ -1,0 +1,118 @@
+:root {
+  --bg-color: rgb(241, 248, 248);
+  --line-color: rgb(214, 239, 240);
+  --hf-color: rgb(211, 247, 248);
+  --font: "Gamja Flower";
+}
+
+/*배경 및 body의 마진, 패딩 세팅*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: var(--font);
+}
+/*시계*/
+.header {
+  background-color: var(--hf-color);
+  text-align: right;
+  height: 50px;
+}
+
+/*주 제목*/
+.mainTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 600;
+  padding-top: 48px;
+  padding-bottom: 6px;
+  margin: 12px 10%;
+  border-bottom: 1px solid var(--line-color);
+}
+.subTitle {
+  display: flex;
+  justify-content: center;
+}
+/*투두 리스트 입력칸*/
+.addToDo {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+  margin-bottom: 48px;
+  width: 100%;
+}
+.addToDoInfo {
+  width: 30%;
+  line-height: normal;
+  padding: 4px;
+  height: 36px;
+  font-size: 24px;
+}
+.addToDoInfo::placeholder {
+  font-style: oblique;
+  font-family: var(--font);
+  color: var(--line-color);
+  margin: 2px;
+}
+.addToDoInfobtn {
+  border: none;
+  background-color: var(--line-color);
+  font-family: var(--font);
+  width: 40px;
+  height: 48px;
+  font-size: 25px;
+}
+
+/*투두 리스트*/
+.list {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin: 0 auto;
+}
+.list .activeToDo,
+.list .doneToDo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.list .activeTitle,
+.list .doneTitle {
+  padding: 6px;
+  border-bottom: 4px solid var(--line-color);
+}
+.list ul {
+  padding: 0;
+  margin: 24px;
+}
+.list li {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: auto;
+  margin: 8px;
+  padding: 6px;
+  border-bottom: 2px solid var(--line-color);
+}
+.list button {
+  border: none;
+  background-color: var(--line-color);
+  font-family: var(--font);
+  padding: 4px 6px;
+  margin-left: 12px;
+}
+.deleteActive,
+.deleteDone {
+  margin: 10px;
+}
+.footer {
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--hf-color);
+  text-align: center;
+}
